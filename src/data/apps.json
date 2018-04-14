@@ -1,0 +1,74 @@
+{
+  "steemit": {
+    "name": "Steemit",
+    "homepage": "https://steemit.com",
+    "post_scheme": "https://steemit.com/{category}/@{username}/{permlink}",
+    "account_scheme": "https://steemit.com/@{username}"
+  },
+  "busy": {
+    "name": "Busy",
+    "homepage": "https://busy.org",
+    "post_scheme": "https://busy.org/@{username}/{permlink}",
+    "account_scheme": "https://busy.org/@{username}"
+  },
+  "busy-staging": {
+    "name": "Busy (Beta)",
+    "homepage": "https://staging.busy.org",
+    "post_scheme": "https://staging.busy.org/@{username}/{permlink}",
+    "account_scheme": "https://staging.busy.org/@{username}"
+  },
+  "utopian": {
+    "name": "Utopian",
+    "homepage": "https://utopian.io",
+    "post_scheme": "https://utopian.io/{category}/@{username}/{permlink}",
+    "account_scheme": "https://utopian.io/@{username}"
+  },
+  "steemkr": {
+    "name": "Steemkr",
+    "homepage": "https://steemkr.com",
+    "post_scheme": "https://steemkr.com/{category}/@{username}/{permlink}",
+    "account_scheme": "https://steemkr.com/@{username}"
+  },
+  "dtube": {
+    "name": "DTube",
+    "homepage": "https://d.tube",
+    "post_scheme": "https://d.tube/#!/v/{username}/{permlink}",
+    "account_scheme": "https://d.tube/#!/c/{username}/"
+  },
+  "dlive": {
+    "name": "DLive",
+    "homepage": "https://www.dlive.io",
+    "post_scheme": "https://www.dlive.io/#/livestream/{username}/{permlink}",
+    "account_scheme": "https://www.dlive.io/@{username}"
+  },
+  "dsound": {
+    "name": "DSound",
+    "homepage": "https://dsound.audio",
+    "post_scheme": "https://dsound.audio/#/@{username}/{permlink}",
+    "account_scheme": "https://dsound.audio/#/@{username}"
+  },
+  "steepshot": {
+    "name": "Steepshot",
+    "homepage": "https://steepshot.io",
+    "post_scheme": "https://alpha.steepshot.io/post/{category}/@{username}/{permlink}",
+    "account_scheme": "https://alpha.steepshot.io/@{username}"
+  },
+  "steemd": {
+    "name": "SteemD",
+    "homepage": "https://steemd.com",
+    "post_scheme": "https://steemd.com/@{username}/{permlink}",
+    "account_scheme": "https://steemd.com/@{username}"
+  },
+  "steemdb": {
+    "name": "SteemDB",
+    "homepage": "https://steemdb.com",
+    "post_scheme": "https://steemdb.com/{category}/@{username}/{permlink}",
+    "account_scheme": "https://steemdb.com/@{username}"
+  },
+  "steem-show": {
+    "name": "Steem.Show",
+    "homepage": "https://steem.show",
+    "post_scheme": false,
+    "account_scheme": "https://steem.show/@{username}"
+  }
+}
