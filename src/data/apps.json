@@ -70,5 +70,11 @@
     "homepage": "https://steem.show",
     "post_scheme": false,
     "account_scheme": "https://steem.show/@{username}"
+  },
+  "minnowbooster": {
+    "name": "MinnowBooster",
+    "homepage": "https://www.minnowbooster.net",
+    "post_scheme": false,
+    "account_scheme": "https://www.minnowbooster.net/users/{username}"
   }
 }
