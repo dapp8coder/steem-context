@@ -5,7 +5,7 @@ module.exports = {
   name: '__MSG_extName__', // Vue Extension
   description: '__MSG_extDescription__', // Vue.js Webpack Chrome Extension Template
   author: 'Diego Hernandes <diego@hernandev.com>',
-  version: '1.0.1',
+  version: '1.0.2',
   icons: {
     '16': 'icons/16.png',
     '128': 'icons/128.png'
