@@ -1,0 +1,92 @@
+// external component wrapper.
+div
+    // options navbar.
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        // container
+        div.container
+            // brand logo
+            a.navbar-brand(href='#')
+                img(src='./../assets/img/logo.svg', alt='SteemContext', height='30')
+
+            // author's account link.
+            #menu-items.collapse.navbar-collapse
+                ul.navbar-nav.ml-auto
+                    li.nav-item
+                        a.nav-link(href="https://steemit.com/@hernandev") @hernandev
+
+
+    // main options container
+    div.container.pt-5.pb-5
+        // row
+        div.row
+            // col
+            div.col
+                // start as form.
+                form.form-options
+
+                    // title
+                    h1 Enabled Applications:
+
+                    // start table.
+                    table.table.table-striped
+                        // start table header.
+                        thead
+                            tr
+                                th Application
+                                th Homepage
+                                th Enabled for Posts
+                                th Enabled for Accounts
+
+                        // start table body.
+                        tbody
+                            // loop applications.
+                            tr(v-for="(app, key) in apps")
+                                // application name.
+                                td {{ app.name }}
+                                // application homepage.
+                                td
+                                    a.app-link(:href="app.homepage", target="_blank") {{ app.homepage }}
+                                // enable / disable for posts.
+                                td
+                                    input(
+                                    type="checkbox",
+                                    v-model="enabledApps[key]['post']",
+                                    :id="'post-' + key",
+                                    v-if="apps[key].post_scheme !== false")
+                                // enable / disable for accounts.
+                                td
+                                    input(
+                                    type="checkbox",
+                                    v-model="enabledApps[key]['account']",
+                                    :id="'account-' + key",
+                                    v-if="apps[key].account_scheme !== false")
+
+
+    // controls container.
+    div.container.pt-5.pb-5.border-top
+        // row
+        div.row
+            // col
+            div.col
+                // controls wrapper
+                div.form-controls
+                    // save button.
+                    button.btn.btn-primary(@click="saveOptions") Save
+
+    // options page footer.
+    footer.pt-4.pt-md-5.border-top
+        // container
+        div.container
+            // row
+            div.row
+                // col
+                div.col
+                    // small copyright.
+                    small.d-block.mb-3.text-muted © 2018 Diego Hernandes
+                // col
+                div.col.text-right
+                    // another author link.
+                    a.ml-auto(href="https://steemit.com/hernandev").btn.btn-sm.btn-outline-primary
+                        | &nbsp;@hernandev
+
+
