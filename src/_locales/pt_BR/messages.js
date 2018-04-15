@@ -11,5 +11,8 @@ module.exports = {
   fromCallback: { message: 'Olá de callback' },
   options: { message: 'opções' },
   popup: { message: 'Nova aba' },
-  tab: { message: 'tab' }
+  tab: { message: 'tab' },
+
+  viewAccount: { message: 'Ver Usuário em' },
+  viewPost: { message: 'Ver Post em' }
 }
