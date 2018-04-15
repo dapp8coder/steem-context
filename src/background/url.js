@@ -28,5 +28,5 @@ export const generateRoute = (url) => {
   return url
     .replace('{category}/', '(:category/)')
     .replace('{username}', ':username')
-    .replace('{permlink}', ':permlink')
+    .replace('/{permlink}', '(/:permlink)')
 }

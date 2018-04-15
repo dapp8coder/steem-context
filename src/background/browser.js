@@ -1,5 +1,12 @@
 // imports.
 import { get } from 'lodash'
+
+// webextension polyfill.
+if (typeof window.browser === 'undefined') {
+  window.browser = window.chrome
+}
+
+// url routing (route-parser)
 const Router = require('route-parser')
 
 /**
@@ -29,7 +36,7 @@ export const registerContextHandler = (title, onclick, contexts = ['link'], link
   }
 
   // registers the handler.
-  window.chrome.contextMenus.create(handlerOptions)
+  window.browser.contextMenus.create(handlerOptions)
 }
 
 /**
@@ -120,25 +127,25 @@ export const generateHandler = (type, route, data) => {
   const baseUrl = extractUrl(data)
 
   // extract the route path alone.
-  const routePath = type === 'post' ? '/(:category/)@:username/:permlink' : '/@:username'
+  const routePath = type === 'post' ? '/(:category/)@:username/:permlink' : '/(:category/)@:username(/:permlink)'
 
   // extract the path part from the URL.
   const path = extractPath(baseUrl)
-
+  console.log(path)
   // extract params from provided path and route.
   const params = routeToParams(routePath, path)
-
+  console.log(params)
   // generate the URL to open the new tab with, appending hash when present.
   const targetUrl = paramsToRoute(route, params) + (extractHash(baseUrl) || '')
 
-  // open the new URL on a new chrome tab.
-  window.chrome.tabs.create({ url: targetUrl })
+  // open the new URL on a new browser tab.
+  window.browser.tabs.create({ url: targetUrl })
 }
 
 /**
- * Remove previously registered chrome context menu handlers.
+ * Remove previously registered browser context menu handlers.
  */
 export const removeAllHandlers = () => {
   // call the removal.
-  window.chrome.contextMenus.removeAll()
+  window.browser.contextMenus.removeAll()
 }
