@@ -4,6 +4,11 @@
         button.btn.btn-primary(type="primary" @click="tab") Settings
 </template>
 <script>
+  // webextension polfill.
+  if (typeof window.browser === 'undefined') {
+    window.browser = window.chrome
+  }
+
   const __ = chrome.i18n.getMessage
 
   export default {
@@ -17,7 +22,7 @@
     methods: {
       tab () {
         // chrome.tabs.create({ url: 'pages/app.html' })
-        window.chrome.runtime.openOptionsPage()
+        window.browser.runtime.openOptionsPage()
       }
     }
   }
