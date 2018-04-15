@@ -1,8 +1,6 @@
 # SteemContext
 
-<span style="display:block; text-align:center;">
-<img src="https://i.imgur.com/bNs4f1Y.png"/>
-</span>
+![SteemContext Banner](https://i.imgur.com/SIhSqyF.png)
 
 **[SteemContext](https://chrome.google.com/webstore/detail/steemcontext/cmkicglllhdbocednkfpljkeaklchpik)** allows switching between all Steem frontend applications using the context (right click) menu. It supports Steem links on any website, and you can configure the frontend applications you want to use.
 
