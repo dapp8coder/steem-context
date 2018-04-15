@@ -61,7 +61,7 @@ module.exports = {
       include: [
         path.join(rootDir, 'src'),
         // https://github.com/sagalbot/vue-select/issues/71#issuecomment-229453096
-        path.join(rootDir, 'node_modules', 'element-ui', 'src', 'utils')
+        path.join(rootDir, 'node_modules', 'src', 'utils')
       ]
     }, {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
