@@ -8,6 +8,7 @@ module.exports = {
   version: '1.0.2',
   icons: {
     '16': 'icons/16.png',
+    '48': 'icons/48.png',
     '128': 'icons/128.png'
   },
   /**
@@ -30,7 +31,10 @@ module.exports = {
   background: {
     page: 'pages/background.html'
   },
-  options_page: 'pages/options.html',
+  options_ui: {
+    open_in_tab: true,
+    page: 'pages/options.html'
+  },
   content_scripts: [{
     js: [
       'js/manifest.js',
